@@ -20,16 +20,15 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 Mark Bailey<br>CG Supervisor
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Homepage for Mark Bailey, VFX artist and CG Supervisor.
 
 # A shorter description for the sidebar.
-tagline:               Now on github. Hurrah.
+tagline:               20 years in Visual Effects
 
 # A list of keywords for your blog
 keywords:              []
@@ -37,7 +36,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/logo.png
+logo:                  /assets/img/g1_thumb.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
