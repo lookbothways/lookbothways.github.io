@@ -20,7 +20,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Mark Bailey<br>CG Supervisor
+title:                 Mark Bailey.<br>CG Supervisor
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -31,7 +31,7 @@ description:           >
 tagline:               20 years in Visual Effects
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              ["maya, houdini, jim henson, jim henson's creature shop, camden, motion capture, london, after effects, BBC, commercial, talking lion, lion queen, pride, the pride, mark, mark bailey, animation, animator, 3d, cgi, special effects, sfx, digital content creator, digital content, digital artis, The Mill, the golden compass, houdini, framestore, dr d, sydney, imagination, uli, uli meyer, harry potter, despereaux, happy feet, sprit untamed, spirit, jellyfish, automatic, dreamworks"]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -41,15 +41,15 @@ logo:                  /assets/img/g1_thumb.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                <Mark> <Bailey>
+  email:               <mark@lookbothways.co.uk>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
+  - title:             Recent work
+    url:               /recentwork/
   - title:             Documentation
     url:               /docs/
   - title:             About
