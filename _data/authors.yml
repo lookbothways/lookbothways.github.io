@@ -2,25 +2,32 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <Mark> <Bailey>
-  email:             <mark@lookbothways.co.uk>
+  name:              Mark Bailey
+  email:             mark@lookbothways.co.uk
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    
-    Open `_data/authors.yml` to edit this text.
+               I have over twenty years of experience in VFX as a CG Supervisor, Technical Director and lighting lead.
+               I use Maya + Arnold as my primary combination, I am learning Houdini and am always building on my Python skills for tools development.
+
+               Things I'm interested in:
+
+               * Agile & Scrum methods in production, not just pipeline.
+               * Leveraging GPUs for near-realtime production quality.
+               * USD and its integration into workflows.
+               * Virtual studio: Cloud-based workstations, renderfarms and their integration.
+               * Applied AI for VFX.
+
+
 
   # This photo will be used in the about section
   picture:
-    path:            https://placehold.it/128x128
+    path:            https://lookbothways.github.io/assets/img/g1_thumb.png
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            https://placehold.it/128x128
-      2x:            https://placehold.it/256x256
+      1x:            https://lookbothways.github.io/assets/img/g1_thumb.png
+      2x:            https://lookbothways.github.io/assets/img/g1_thumb.png
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide

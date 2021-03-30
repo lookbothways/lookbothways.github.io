@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Example Content
+title: DreamWorks' Spirit Untamed | CG Supervisor
 description: >
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+  Jellyfish pictures as the vendor for DreamWorks. 
 sitemap: false
 hide_last_modified: true
 ---
 
-Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+Horse things. 
 
 > Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
