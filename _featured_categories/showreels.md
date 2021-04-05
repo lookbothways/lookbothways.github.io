@@ -3,15 +3,15 @@
 layout: list
 
 # The title of the tag's page.
-title: Recent work
+title: Showreels
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: recent
+slug: showreels
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Recent work
-  
+  Collected reels 
+
 # (Optional) You can disable grouping posts by date.
 no_groups: true
 
@@ -20,14 +20,8 @@ no_groups: true
 sitemap: false
 ---
 
-My current homepage is live here www.lookbothways.co.uk 
-
-
 # Recent VFX Work
+<iframe src="https://player.vimeo.com/video/161915322" width="640" height="564" frameborder="0" allow="fullscreen" allowfullscreen></iframe>My current latest showreel. 
 
-
-
-
-> Spirit Untamed
+> Related posts
 {:.lead}
-

@@ -7,18 +7,7 @@ author1:
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-  about:             |
-               I have over twenty years of experience in VFX as a CG Supervisor, Technical Director and lighting lead.
-               I use Maya + Arnold as my primary combination, I am learning Houdini and am always building on my Python skills for tools development.
-
-               Things I'm interested in:
-
-               * Agile & Scrum methods in production, not just pipeline.
-               * Leveraging GPUs for near-realtime production quality.
-               * USD and its integration into workflows.
-               * Virtual studio: Cloud-based workstations, renderfarms and their integration.
-               * Applied AI for VFX.
-
+  about: Mark Bailey - CG Supervisor & Lighting Lead working in VFX since 2001
 
 
   # This photo will be used in the about section

@@ -11,7 +11,7 @@ url:                   https://lookbothways.github.io
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 # first build with set JEKYLL_ENV=production with this baseURL below, then change this config before commit and push. 
 #baseurl:               '/lookbothways'
-baseurl:               '/'
+baseurl:               ''
 
 
 # General settings
@@ -43,17 +43,19 @@ logo:                  /assets/img/g1_thumb.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <Mark> <Bailey>
-  email:               <mark@lookbothways.co.uk>
+  name:                Mark Bailey
+  email:               mark@lookbothways.co.uk
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Recent work
+  - title:             Recent Work
     url:               /recentwork/
-  - title:             Documentation
-    url:               /docs/
+#  - title:             Documentation
+#    url:               /docs/
+  - title:             Other projects
+    url:               /lbw/
   - title:             About
     url:               /about/
 
