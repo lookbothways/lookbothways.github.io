@@ -1,0 +1,75 @@
+/* ==============TAG SELECTORS */
+
+div {
+    margin: 10px;
+        }
+
+body {
+    background-color: #FEF1E6;
+    margin: 0px;
+    font-family: 'DM Sans', sans-serif;
+    }
+
+hr {
+    margin-top: 0;
+    width: 5%;
+    border: 5px dotted;
+    border-style: none none dotted;
+    color: #90AACB;
+}
+
+h1 {
+    color: #0061A8;
+    margin: 0px;
+}
+
+h3 {
+    color: #0061A8;
+    margin-left: 30px;
+
+}
+
+/* ==============CLASS SELECTORS */
+
+
+.bg {
+  background:url(images/bknd.jpg);
+  color: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.bullets {
+    margin-left: 35px;
+}
+
+.profile {
+}
+
+.thumbs {
+}
+
+.circular {
+    border-radius: 15%;
+}
+
+.strapline {
+    color: #2978B5;
+    size: 17px;
+    margin: 0px;
+}
+
+/* ==============ID SELECTORS have higher priority over class selector but only use IDs when changing a single instance over classes - ID can't be used in multiple places like CLASS can */
+/*  These are not always recommended - people use CSS everywhere these days */
+
+
+
+/* ==============PSEUDO */
+
+img:hover {
+ /*background-color: black;*/
+}
