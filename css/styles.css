@@ -10,6 +10,7 @@ body {
     font-family: 'DM Sans', sans-serif;
     }
 
+/*
 hr {
     margin-top: 0;
     width: 5%;
@@ -17,10 +18,12 @@ hr {
     border-style: none none dotted;
     color: #90AACB;
 }
+*/
 
 h1 {
     color: #0061A8;
     margin: 0px;
+    text-align: center;
 }
 
 h3 {
@@ -33,7 +36,7 @@ h3 {
 
 
 .bg {
-  background:url(images/bknd.jpg);
+  background:url(img/bknd.jpg);
   color: black;
   position: fixed;
   width: 100%;
