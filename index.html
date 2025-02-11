@@ -5,25 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lookbothways</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .rotate-90 {
+                transform: rotate(90deg);
+                width: 100vh !important;
+                height: 100vw !important;
+                max-width: none;
+            }
+        }
+    </style>
 </head>
 <body class="bg-black text-white">
-
-        <div id="showreelModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
-        <div class="relative w-4/5 mx-auto">
-<button 
-    onclick="closeShowreel()"
-    class="absolute -top-10 right-0 text-white px-2 py-5 h-15"
->
-    Close
-</button>
-            <video 
-                controls 
-                class="w-full"
-                src="api/video/showreel.mp4"
-            >
-            </video>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent">
@@ -557,31 +550,55 @@
     </div>
 </div>
 
+
+
 </div>
+<!--
                     </div>
                     <div class="p-6 border rounded-lg">
                         <h3 class="text-xl font-bold mb-4">Pipeline Support</h3>
-                        <p>Knowing what's possible with code and how long it takes to make, having written countless pipeline and shelf tools...</p>
+                        <p>code</p>
 
 
-
+-->
 
                     </div>
+                </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4 mt-8">
 
                     <div class="p-6 border rounded-lg">
                         <h3 class="text-xl font-bold mb-4">Artist and Production Support</h3>
-                        <p>I will help you keep a show on track, help create asset status reports, script breakdowns, bids, workflow diagrams, Python scripts and usefully formatted info from Flow Production Tracking.<br>I will create tools for final delivery, data retrieval and sends, handle playlist management and create tools.<br>I will run dailies, hold workshops and create tutorials and wikis and be direct and calm and always keep things moving forwards.</p>
+
+                        
+                        <p>
+                            Script breakdowns and bids<br>
+                            Workflow and pipeline design and build<br>
+                            Technology RnD<br>
+                            Layout and Previs planning and build<br>
+                            Character, prop and environment build and review<br>
+                            Rig testing and quality control<br>
+                            Asset and shot status reporting<br>
+                            Animation finalling quality control<br>
+                            Lighting and comp review<br>
+                            Image Finalling review and Quality Control<br>
+
+                            <br></p>
+                        
+
 
                         <!--
                         <body class="p-6">
                         <ul class="list-disc list-inside">
-                            <li class="mb-2">thing</li>
-                            <li class="mb-2">stuff</li>
+                            <li class="mb-2">bullet1</li>
+                            <li class="mb-2">bullet2</li>
                         </ul>
                         -->
 
 
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+
+
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
 
                         <div class="relative group cursor-pointer">
                             <img 
@@ -598,13 +615,26 @@
 
                         <div class="relative group cursor-pointer">
                             <img 
-                                src="images/pipelineworkflow.jpg" 
+                                src="images\pipeline_2020_clean.png" 
                                 alt="Pipeline example workflow" 
                                 class="w-full transition-opacity duration-300 group-hover:opacity-50 rounded-lg"
                             />
                             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div style="text-align: center;">
                                     <span class="text-white text-sm font-semibold">Pipeline evolution</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative group cursor-pointer">
+                            <img 
+                                src="images\shotstatusworkflow.jpg" 
+                                alt="Pipeline example workflow" 
+                                class="w-full transition-opacity duration-300 group-hover:opacity-50 rounded-lg"
+                            />
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div style="text-align: center;">
+                                    <span class="text-white text-sm font-semibold">Shot Status flow</span>
                                 </div>
                             </div>
                         </div>
@@ -655,13 +685,17 @@
             <div class="max-w-4x2 mx-auto text-left">
                 <h2 class="text-4xl font-bold mb-8">Let's Work Together</h2>
                 <div class="w-full text-left>
-                    <p class="mb-4">For enquiries, please email:</p>
+                    <p class="mb-4">For enquiries:</p>
                     <a href="mailto:mark@lookbothways.studio" class="text-gray-400 hover:underline">
 
-                    mark@lookbothways.studio</a><br><br><br>
+                    mark@lookbothways.studio</a><br><br>
+                    Telephone: +44 (0)7887 998 308<br>
+
+                    <a href="whatsapp://send?phone=447887998308" style="color: grey;">Or message via WhatsApp</a>
 
 
-                    <div class="flex justify-center space-x-6 mt-12">
+
+                    <div class="flex justify-center space-x-6 mt-12" style="color: grey;">
                          "Did we triple output?"<br>"Yes!"<br>
                     </div>
                 </div>
@@ -672,6 +706,8 @@
                         <a href="https://www.vimeo.com/markbailey" target="_blank" class="hover:text-white">Vimeo</a>
                         <a href="https://www.linkedin.com/in/mark-bailey-vfx-artist" target="_blank" class="hover:text-white">LinkedIn</a>
                     </div>
+
+                    <br><br><br><br><br><br>
 
             </div>
         </div>
@@ -727,43 +763,127 @@
 
     </script>
 
-    <!-- spiritModal video -->
-    <div id="spiritModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
-        <div class="relative w-4/5 mx-auto">
-            <button 
-                onclick="closeSpiritVideo()"
-                class="absolute -top-10 right-0 text-white"
-            >
-                Close
-            </button>
-            <video 
-                controls 
-                autoplay
-                class="w-full"
-                src="api/video/spirit.mp4"
-            >
-            </video>
+<!-- Showreel Modal -->
+<div id="showreelModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeShowreel()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        Close
+    </button>
+    <div class="relative w-4/5 mx-auto md:mt-0">
+        <div class="w-full h-full flex items-center justify-center">
+            <video controls class="w-full md:w-auto" src="api/video/showreel.mp4"></video>
         </div>
     </div>
+</div>
 
-    <!-- sandmanModal video -->
-    <div id="sandmanModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
-        <div class="relative w-4/5 mx-auto">
-            <button 
-                onclick="closeSandmanVideo()"
-                class="absolute -top-10 right-0 text-white"
-            >
-                Close
-            </button>
-            <video 
-                controls 
-                autoplay
-                class="w-full"
-                src="api/video/DOATC.mp4"
-            >
-            </video>
+<!-- Spirit Modal -->
+<div id="spiritModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeSpiritVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        X
+    </button>
+    <div class="relative w-4/5 mx-auto md:mt-0">
+        <div class="w-full h-full flex items-center justify-center">
+            <video controls autoplay class="w-full md:w-auto" src="api/video/spirit.mp4"></video>
         </div>
     </div>
+</div>
+
+<!-- Sandman Modal -->
+<div id="sandmanModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeSandmanVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        X
+    </button>
+    <div class="relative w-4/5 mx-auto md:mt-0">
+        <div class="w-full h-full flex items-center justify-center">
+            <video controls autoplay class="w-full md:w-auto" src="api/video/DOATC.mp4"></video>
+        </div>
+    </div>
+</div>
+
+<script>
+        function checkMobileAndRotate() {
+            // Only select videos in modals
+            const videos = document.querySelectorAll('#showreelModal video, #spiritModal video, #sandmanModal video');
+            const isMobile = window.innerWidth <= 768;
+            
+            videos.forEach(video => {
+                if (isMobile) {
+                    video.classList.add('rotate-90', 'origin-center');
+                    video.parentElement.classList.add('h-screen', 'flex', 'items-center', 'justify-center');
+                } else {
+                    video.classList.remove('rotate-90', 'origin-center');
+                    video.parentElement.classList.remove('h-screen', 'flex', 'items-center', 'justify-center');
+                }
+            });
+        }
+
+        window.addEventListener('load', checkMobileAndRotate);
+        window.addEventListener('resize', checkMobileAndRotate);
+
+        // Your existing scripts
+        function openShowreel() {
+            document.getElementById('showreelModal').classList.remove('hidden');
+            const video = document.querySelector('#showreelModal video');
+            video.play();
+        }
+
+        function closeShowreel() {
+            document.getElementById('showreelModal').classList.add('hidden');
+            const video = document.querySelector('#showreelModal video');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function openSpiritVideo() {
+            document.getElementById('spiritModal').classList.remove('hidden');
+            const video = document.querySelector('#spiritModal video');
+            video.play();
+        }
+
+        function closeSpiritVideo() {
+            document.getElementById('spiritModal').classList.add('hidden');
+            const video = document.querySelector('#spiritModal video');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function openSandmanVideo() {
+            document.getElementById('sandmanModal').classList.remove('hidden');
+            const video = document.querySelector('#sandmanModal video');
+            video.play();
+        }
+
+        function closeSandmanVideo() {
+            document.getElementById('sandmanModal').classList.add('hidden');
+            const video = document.querySelector('#sandmanModal video');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+
+
+function handleModalClick(event, modalId, closeFunction) {
+    const modal = document.getElementById(modalId);
+    if (event.target === modal) {
+        closeFunction();
+    }
+}
+
+function addModalListeners(modalId, closeFunction) {
+    const modal = document.getElementById(modalId);
+    modal.addEventListener('pointerdown', (e) => handleModalClick(e, modalId, closeFunction));
+}
+
+addModalListeners('showreelModal', closeShowreel);
+addModalListeners('spiritModal', closeSpiritVideo);
+addModalListeners('sandmanModal', closeSandmanVideo);
+
+
+    </script>
+
+
+
+</body>
+</html>
 
 
 </body>
