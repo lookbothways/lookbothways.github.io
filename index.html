@@ -86,53 +86,98 @@
     </div>
 </section>
 
-    <!-- Portfolio Grid -->
-    <section id="work" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4x2 mx-auto text-left">
-                <h2 class="text-4xl font-bold mb-8">Recent Projects</h2>
-                <!--
-                <div class="space-x-4">
-                    <button class="px-4 py-2 rounded-full border">All</button>
-                    <button class="px-4 py-2 rounded-full border">Commercial</button>
-                    <button class="px-4 py-2 rounded-full border">Documentary</button>
-                    <button class="px-4 py-2 rounded-full border">Music</button>
+
+<!-- Portfolio Grid -->
+<section id="work" class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4x2 mx-auto text-left">
+            <h2 class="text-4xl font-bold mb-8">Recent Projects</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Wolf King -->
+            <div class="relative group cursor-pointer" onclick="openWolfKingVideo()">
+                <img 
+                    src="img/thumb_wolfking_play.png"
+                    alt="Wolf King"
+                    class="w-full transition-opacity duration-300 group-hover:opacity-50"
+                />
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-semibold">Wolf King<br>Embedded YouTube trailer</span>
                 </div>
-            -->
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Portfolio VIDEO Items -->
-
-
-                <!-- spirit -->
-                <div class="relative group cursor-pointer" onclick="openSpiritVideo()">
-                    <img 
-                        src="img/thumb_spirit_play.png"
-                        alt="Spirit Untamed"
-                        class="w-full transition-opacity duration-300 group-hover:opacity-50"
-                    />
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span class="text-white text-xl font-semibold">Spirit Untamed<br>27 seconds</span>
-                    </div>
+            <!-- Spirit -->
+            <div class="relative group cursor-pointer" onclick="openSpiritVideo()">
+                <img 
+                    src="img/thumb_spirit_play.png"
+                    alt="Spirit Untamed"
+                    class="w-full transition-opacity duration-300 group-hover:opacity-50"
+                />
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-semibold">Spirit Untamed<br>27 second breakdown</span>
                 </div>
+            </div>
 
-                <!-- sandman -->
-                <div class="relative group cursor-pointer" onclick="openSandmanVideo()">
-                    <img 
-                        src="img/thumb_sandman_play.png"
-                        alt="The Sandman - Dream of a thousand cats"
-                        class="w-full transition-opacity duration-300 group-hover:opacity-50"
-                    />
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span class="text-white text-xl font-semibold">The Sandman - Dream of a thousand cats<br>20 seconds</span>
-                    </div>
+            <!-- Sandman -->
+            <div class="relative group cursor-pointer" onclick="openSandmanVideo()">
+                <img 
+                    src="img/thumb_sandman_play.png"
+                    alt="The Sandman - Dream of a thousand cats"
+                    class="w-full transition-opacity duration-300 group-hover:opacity-50"
+                />
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-semibold">The Sandman - Dream of a thousand cats<br>20 second breakdown</span>
                 </div>
-                <!-- Repeat for more portfolio items -->
-
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Wolf King Modal -->
+<div id="wolfKingModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeWolfKingVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        X
+    </button>
+    <div class="fixed inset-0 flex items-center justify-center">
+        <div class="w-4/5 h-4/5">
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/QqDDuVe9dw8?si=qFilfyod8i4Sd-gK&autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Spirit Modal -->
+<div id="spiritModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeSpiritVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        X
+    </button>
+    <div class="fixed inset-0 flex items-center justify-center">
+        <div class="w-4/5">
+            <video controls autoplay class="w-full" src="api/video/spirit.mp4"></video>
+        </div>
+    </div>
+</div>
+
+<!-- Sandman Modal -->
+<div id="sandmanModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <button onclick="closeSandmanVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
+        X
+    </button>
+    <div class="fixed inset-0 flex items-center justify-center">
+        <div class="w-4/5">
+            <video controls autoplay class="w-full" src="api/video/DOATC.mp4"></video>
+        </div>
+    </div>
+</div>
+
+
+</section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-900">
@@ -772,34 +817,14 @@
     </div>
 </div>
 
-<!-- Spirit Modal -->
-<div id="spiritModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
-    <button onclick="closeSpiritVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
-        X
-    </button>
-    <div class="relative w-4/5 mx-auto md:mt-0">
-        <div class="w-full h-full flex items-center justify-center">
-            <video controls autoplay class="w-full md:w-auto" src="api/video/spirit.mp4"></video>
-        </div>
-    </div>
-</div>
 
-<!-- Sandman Modal -->
-<div id="sandmanModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
-    <button onclick="closeSandmanVideo()" class="fixed top-4 right-4 text-white z-50 px-4 py-2 hover:bg-gray-800 rounded">
-        X
-    </button>
-    <div class="relative w-4/5 mx-auto md:mt-0">
-        <div class="w-full h-full flex items-center justify-center">
-            <video controls autoplay class="w-full md:w-auto" src="api/video/DOATC.mp4"></video>
-        </div>
-    </div>
-</div>
+
+
 
 <script>
         function checkMobileAndRotate() {
             // Only select videos in modals
-            const videos = document.querySelectorAll('#showreelModal video, #spiritModal video, #sandmanModal video');
+            const videos = document.querySelectorAll('#showreelModal video, #wolfKingModal video, #spiritModal video, #sandmanModal video');
             const isMobile = window.innerWidth <= 768;
             
             videos.forEach(video => {
@@ -816,7 +841,20 @@
         window.addEventListener('load', checkMobileAndRotate);
         window.addEventListener('resize', checkMobileAndRotate);
 
-        // Your existing scripts
+        // scripts
+
+        function openWolfKingVideo() {
+            document.getElementById('wolfKingModal').classList.remove('hidden');
+        }
+
+        function closeWolfKingVideo() {
+            document.getElementById('wolfKingModal').classList.add('hidden');
+            // Reset iframe src to stop video
+            const iframe = document.querySelector('#wolfKingModal iframe');
+            const src = iframe.src;
+            iframe.src = src;
+        }
+
         function openShowreel() {
             document.getElementById('showreelModal').classList.remove('hidden');
             const video = document.querySelector('#showreelModal video');
@@ -873,6 +911,8 @@ function addModalListeners(modalId, closeFunction) {
 addModalListeners('showreelModal', closeShowreel);
 addModalListeners('spiritModal', closeSpiritVideo);
 addModalListeners('sandmanModal', closeSandmanVideo);
+addModalListeners('wolfKingModal', closeWolfKingVideo);
+
 
 
     </script>
