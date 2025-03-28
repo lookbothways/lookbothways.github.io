@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Weather Overlay</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .top-layer {
+            opacity: 0.2; /* Adjust for desired transparency */
+            pointer-events: none; /* Ensures interaction with the bottom frame */
+        }
+    </style>
+    <script>
+        function reloadPage() {
+            location.reload();
+        }
+        
+        function checkTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const iframe = document.getElementById("weather-frame");
+            
+            if (hours === 23 && minutes === 19) {
+                iframe.src = "https://www.blackscreen.app";
+            } else if (hours === 8 && minutes === 8) {
+                iframe.src = "weather.html"; // Reload main weather overlay
+            }
+        }
+        
+        setInterval(reloadPage, 600000); // Refresh every 10 minutes
+        setInterval(checkTime, 60000); // Check every minute
+    </script>
+</head>
+<body>
+    <div class="container">
+        <iframe id="weather-frame" src="https://weather.metoffice.gov.uk/maps-and-charts/precipitation-map#?model=ukmo-ukv&layer=precipitation-type&bbox=[[51.16728887106285,-7.371826171875001],[52.980069558305594,-1.9473266601562502]]&search=Cardigan%20(Ceredigion)&slatlong=52.08341360092163%2C-4.659683704376221&sgeohash=gck8mcqzv"></iframe>
+
+        <iframe class="top-layer" src="https://weather.metoffice.gov.uk/maps-and-charts/cloud-cover-map#?model=ukmo-ukv&layer=cloud-amount-total&bbox=[[51.16728887106285,-7.371826171875001],[52.980069558305594,-1.9473266601562502]]&search=Cardigan%20(Ceredigion)&slatlong=52.08341360092163%2C-4.659683704376221&sgeohash=gck8mcqzv"></iframe>
+
+        <iframe class="top-layer" src="https://weather.metoffice.gov.uk/maps-and-charts/uk-weather-map#?model=ukmo-ukv&layer=weather-symbols&bbox=[[51.16728887106285,-7.371826171875001],[52.980069558305594,-1.9473266601562502]]&search=Cardigan%20(Ceredigion)&slatlong=52.08341360092163%2C-4.659683704376221&sgeohash=gck8mcqzv"></iframe>
+        
+        <iframe class="top-layer" src="https://weather.metoffice.gov.uk/maps-and-charts/wind-gusts-map#?model=ukmo-ukv&layer=wind-gust-and-direction&bbox=[[51.16728887106285,-7.371826171875001],[52.980069558305594,-1.9473266601562502]]&search=Cardigan%20(Ceredigion)&slatlong=52.08341360092163%2C-4.659683704376221&sgeohash=gck8mcqzv"></iframe>
+    </div>
+</body>
+</html>
