@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mouse Pointer Grid</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background: white;
+    }
+    .pointer {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+      transform-origin: center center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const pointerSize = 32;
+    const imgSrc = 'pointer.png';
+
+    const cols = Math.ceil(window.innerWidth / pointerSize);
+    const rows = Math.ceil(window.innerHeight / pointerSize);
+    const pointers = [];
+
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.className = 'pointer';
+        img.style.left = `${x * pointerSize}px`;
+        img.style.top = `${y * pointerSize}px`;
+        document.body.appendChild(img);
+        pointers.push({el: img, x: x * pointerSize + pointerSize / 2, y: y * pointerSize + pointerSize / 2});
+      }
+    }
+
+    document.addEventListener('mousemove', e => {
+      const mx = e.clientX;
+      const my = e.clientY;
+      for (const p of pointers) {
+        const dx = mx - p.x;
+        const dy = my - p.y;
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+        p.el.style.transform = `rotate(${angle}deg)`;
+      }
+    });
+  </script>
+</body>
+</html>
