@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mouse Pointer Grid</title>
+  <title>Pointer Grid</title>
   <style>
     html, body {
       margin: 0;
@@ -11,6 +11,7 @@
       overflow: hidden;
       height: 100%;
       background: white;
+      touch-action: none; /* Prevent scrolling on touch */
     }
     .pointer {
       position: absolute;
@@ -25,33 +26,59 @@
   <script>
     const pointerSize = 32;
     const imgSrc = 'pointer.png';
+    let pointers = [];
 
-    const cols = Math.ceil(window.innerWidth / pointerSize);
-    const rows = Math.ceil(window.innerHeight / pointerSize);
-    const pointers = [];
+    function initGrid() {
+      document.body.innerHTML = ''; // Clear previous elements if resizing
+      pointers = [];
 
-    for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-        const img = document.createElement('img');
-        img.src = imgSrc;
-        img.className = 'pointer';
-        img.style.left = `${x * pointerSize}px`;
-        img.style.top = `${y * pointerSize}px`;
-        document.body.appendChild(img);
-        pointers.push({el: img, x: x * pointerSize + pointerSize / 2, y: y * pointerSize + pointerSize / 2});
+      const cols = Math.ceil(window.innerWidth / pointerSize);
+      const rows = Math.ceil(window.innerHeight / pointerSize);
+
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.className = 'pointer';
+          img.style.left = `${x * pointerSize}px`;
+          img.style.top = `${y * pointerSize}px`;
+          document.body.appendChild(img);
+          pointers.push({
+            el: img,
+            x: x * pointerSize + pointerSize / 2,
+            y: y * pointerSize + pointerSize / 2
+          });
+        }
       }
     }
 
-    document.addEventListener('mousemove', e => {
-      const mx = e.clientX;
-      const my = e.clientY;
+    function updatePointers(mx, my) {
       for (const p of pointers) {
         const dx = mx - p.x;
         const dy = my - p.y;
         const angle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
         p.el.style.transform = `rotate(${angle}deg)`;
       }
+    }
+
+    // Mouse move
+    document.addEventListener('mousemove', e => {
+      updatePointers(e.clientX, e.clientY);
     });
+
+    // Touch move
+    document.addEventListener('touchmove', e => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        updatePointers(touch.clientX, touch.clientY);
+      }
+    }, { passive: false });
+
+    // Recalculate on resize (optional)
+    window.addEventListener('resize', initGrid);
+
+    // Initialize
+    initGrid();
   </script>
 </body>
 </html>
